@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Feature Boxes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightBlue: '#2b84ea',
+                        lightBlue500: '#4895ef',
+                        deepBlueHead: '#02042a',
+                        grayText: '#818597',
+                        grayBlue: '#525a76',
+                    },
+                    fontFamily: {
+                        mullish: ["Mulish", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="font-mullish">
+    <div class="w-full max-w-[1080px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 px-4"> 
+        <!-- Reusable Card --> 
+        <div class="w-full max-h-[15rem] relative cursor-pointer rounded-md overflow-hidden shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200"  
+             x-data="{}"  
+             x-for="i in 6" :key="i"> 
+              
+          <!--bg image--> 
+          <img src="./images copy/payment-link-icon.svg" alt="" 
+               class="w-12 h-12 absolute bg-lightBlue right-3 top-3 rounded-full z-8 transition-all duration-200"> 
+       
+          <!--box shape--> 
+          <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" 
+               class="stroke-1 stroke-[#818597] h-full w-full absolute z-[9] transition-all duration-200" 
+               style="stroke-opacity: 0.15"> 
+            <path d="m 0 6  
+              a 6 6 0 0 1 6 -6  
+              h 250.32501220703125  
+              a 16 16 0 0 1 11 5  
+              l 77 77  
+              a 16 16 0 0 1 5 11  
+              v 126  
+              a 6 6 0 0 1 -6 6  
+              h -337.32501220703125  
+              a 6 6 0 0 1 -6 -6  
+              z" fill="#fff"></path> 
+          </svg> 
+       
+          <!--box content--> 
+          <div class="z-100 absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8"> 
+            <!--text part--> 
+            <h3 class="font-mullish font-bold text-deepBlueHead leading-[1.2] text-[1.375rem]">Payment Links</h3> 
+            <p class="font-mullish text-grayText mt-6">Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately</p> 
+             
+            <!--hyperlink--> 
+            <div class="flex items-center cursor-pointer group"> 
+              <a href="#" 
+                 class="font-mullish text-lightBlue hover:text-grayBlue transition-all duration-200 font-bold">Know More</a> 
+              <i data-feather="chevron-right" 
+                 class="transition-all duration-200 w-5 h-5 text-lightBlue500"></i> 
+            </div> 
+          </div> 
+        </div> 
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
